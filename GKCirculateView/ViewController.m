@@ -30,7 +30,7 @@
     
 }
 - (void)circulateView:(GKCirculateView *)circulateView didClickImage:(NSInteger)index {
-    
+    NSLog(@"这是第%ld张图片", index);
 }
 
 - (void)didReceiveMemoryWarning {
