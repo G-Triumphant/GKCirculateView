@@ -11,6 +11,7 @@
 #define DEFAULTTIME 5
 #define KSCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
 #define KSCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
 //方向枚举
 typedef NS_ENUM(NSInteger, GKCirculateViewDirectType) {
     GKCirculateViewNoneDirectType = 0,
@@ -21,30 +22,30 @@ typedef NS_ENUM(NSInteger, GKCirculateViewDirectType) {
 @interface GKCirculateView() <UIScrollViewDelegate>
 
 //图片数组
-@property(nonatomic, strong) NSMutableArray *images;
+@property (nonatomic, strong) NSMutableArray *images;
 //当前显示的视图
-@property(nonatomic, strong) UIImageView *currentImageView;
+@property (nonatomic, strong) UIImageView *currentImageView;
 //将要显示的下一张视图
-@property(nonatomic, strong) UIImageView *nextImageView;
+@property (nonatomic, strong) UIImageView *nextImageView;
 //当前图片索引
-@property(nonatomic) NSInteger currentIndex;
+@property (nonatomic) NSInteger currentIndex;
 //即将出现图片的索引
-@property(nonatomic) NSInteger nextIndex;
+@property (nonatomic) NSInteger nextIndex;
 //滚动视图
-@property(nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) UIScrollView *scrollView;
 //分页控件
-@property(nonatomic, strong) UIPageControl *pageControl;
+@property (nonatomic, strong) UIPageControl *pageControl;
 //方向枚举
-@property(nonatomic) GKCirculateViewDirectType circulateViewDirectType;
+@property (nonatomic) GKCirculateViewDirectType circulateViewDirectType;
 //定时器
-@property(nonatomic, strong) NSTimer *timer;
+@property (nonatomic, strong) NSTimer *timer;
 
 //下载图片的字典
-@property(nonatomic, strong) NSMutableDictionary *imageDic;
+@property (nonatomic, strong) NSMutableDictionary *imageDic;
 //下载图片的操作
-@property(nonatomic, strong) NSMutableDictionary *operationDic;
+@property (nonatomic, strong) NSMutableDictionary *operationDic;
 //任务队列
-@property(nonatomic, strong) NSOperationQueue *queue;
+@property (nonatomic, strong) NSOperationQueue *queue;
 @end
 
 @implementation GKCirculateView

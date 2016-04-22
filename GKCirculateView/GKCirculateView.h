@@ -12,6 +12,7 @@
 typedef  void(^ClickBlock)(NSInteger index);
 
 @class GKCirculateView;
+
 @protocol GKCirculateViewDelegate <NSObject>
 //2.点击图片处理事件(代理)
 - (void)circulateView:(GKCirculateView *)circulateView didClickImage:(NSInteger)index;
@@ -21,13 +22,13 @@ typedef  void(^ClickBlock)(NSInteger index);
 @interface GKCirculateView : UIView
 
 //图片数组
-@property(nonatomic, strong) NSArray *imageAry;
+@property (nonatomic, strong) NSArray *imageAry;
 //时间间隔
-@property(nonatomic) NSTimeInterval time;
+@property (nonatomic) NSTimeInterval time;
 
 //点击图片后执行的操作
-@property(nonatomic, copy) ClickBlock imageClickBlock;
-@property(nonatomic, weak) id<GKCirculateViewDelegate> delegate;
+@property (nonatomic, copy) ClickBlock imageClickBlock;
+@property (nonatomic, weak) id<GKCirculateViewDelegate> delegate;
 
 #pragma mark -- 构造方法
 - (instancetype)initWithImageAry:(NSArray *)imageAry;

@@ -11,7 +11,7 @@
 
 @interface ViewController ()<GKCirculateViewDelegate>
 
-@property(nonatomic, strong) GKCirculateView *circulateView;
+@property (nonatomic, strong) GKCirculateView *circulateView;
 @end
 
 @implementation ViewController
@@ -24,6 +24,7 @@
     _circulateView.frame = CGRectMake(0, 100, 375, 150);
     _circulateView.delegate = self;
     
+    //时间间隔
     _circulateView.time = 5;
     [self.view addSubview:_circulateView];
     
